@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "cssparafor.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales magna nulla, ac lacinia felis bibendum a. Curabitur leo orci, dictum et ultricies ac, suscipit sed urna. Maecenas sollicitudin tempus auctor. Vestibulum pharetra neque id erat pulvinar fermentum. Ut magna elit, semper nec diam sed, suscipit ornare urna. Etiam leo ex, dignissim et augue quis, placerat finibus lorem. Integer non urna velit.</p>
+
+<p>Aenean non nisi nec orci laoreet consectetur. Nunc vel sagittis nunc, non sagittis augue. Pellentesque non euismod turpis. Pellentesque finibus lectus ipsum, gravida tincidunt ante pharetra a. Donec urna neque, consectetur sed tempus vitae, semper id nunc. Quisque nunc dui, vestibulum ac mattis vel, laoreet vulputate libero. Ut augue nisi, aliquam nec augue quis, rutrum maximus est. Sed vehicula ex et consequat commodo. Mauris nec lectus eu erat tincidunt imperdiet. Etiam sed erat ac urna egestas elementum. Duis ornare aliquet lectus. Fusce posuere leo ut enim accumsan feugiat. Ut pellentesque felis nec augue vestibulum vehicula. Praesent porttitor placerat ex, quis dictum augue.</p>
+
+<p>In rhoncus sapien ex, et aliquet risus pulvinar vitae. Etiam bibendum dignissim ligula at ullamcorper. Maecenas velit quam, tincidunt a maximus id, tempor nec tellus. Donec sit amet consectetur leo. Nulla accumsan euismod metus non aliquet. Mauris pharetra est nec mi consectetur, in ultricies nisi semper. Nam volutpat a ex at fringilla. Mauris hendrerit vel nisi quis vulputate. Curabitur eu lacus et tortor gravida tincidunt in non urna. Fusce vel tincidunt ante.</p>
+
+<p>Duis pharetra massa a diam posuere, placerat blandit nibh mattis. Suspendisse congue luctus felis, eleifend porta augue. In quis tempus risus. Nullam pellentesque porta sem eu tristique. Nam id convallis sem. Vestibulum nunc justo, iaculis nec lacus sit amet, fringilla porttitor magna. Cras eget lectus id turpis interdum sodales.</p>
+
+<p>Suspendisse ac malesuada nisl. Cras justo lectus, iaculis quis erat sit amet, commodo egestas enim. In tristique, ex consequat ornare condimentum, risus odio eleifend sapien, efficitur interdum elit lorem eu velit. Curabitur interdum, lorem non pellentesque accumsan, odio tellus fermentum dolor, in feugiat elit justo in nunc. Vivamus vel maximus est. Nam nisl mauris, scelerisque ac luctus fermentum, tincidunt ut lectus. Mauris at molestie metus. Praesent blandit quis nisi sit amet ullamcorper. Etiam vitae elit ac nisl malesuada gravida porta a sapien. Nunc molestie ornare libero, quis fringilla felis eleifend a. Cras non leo ac dui laoreet tincidunt vitae ac nibh. Mauris sodales mauris ut justo finibus, a sagittis neque facilisis. Proin a lorem ex.</p>
+</body>
+</html>
+
+
+<script>
+    var p = document.querySelectorAll("p")
+    for(var i = 0; i < p.length; i++){
+        p[i].addEventListener("click", function(){
+        this.classList.toggle("resaltado")
+    })
+}
+
+</script>
+

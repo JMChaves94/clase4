@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="displayNone.css">
+    <title>Document</title>
+</head>
+<body>
+    <button>Show me the Money</button>
+    <button>Show me Miami</button>
+    <button>Show me Maiameee</button>
+    <br>
+    <img src="pesos.jpg" width="150px" height="150px">
+    <img src="miami.jpg"width="150px" height="150px">
+    <img src="ricky.png"width="150px" height="150px">
+</body>
+</html>
+
+<script>
+    var img = document.querySelectorAll("img")
+    var boton = document.querySelectorAll("button")
+
+    for(var i=0; i<img.length; i++){
+        img[i].classList.add("oculto")
+    }
+
+    boton[0].addEventListener("click", mostrarImagen1)
+    boton[1].addEventListener("click", mostrarImagen2)
+    boton[2].addEventListener("click", mostrarImagen3)
+    img[0].addEventListener("click", mostrarImagen1)
+    img[1].addEventListener("click", mostrarImagen2)
+    img[2].addEventListener("click", mostrarImagen3)
+
+function mostrarImagen1() {
+    img[0].classList.toggle("oculto")
+}
+
+function mostrarImagen2() {
+    img[1].classList.toggle("oculto")
+}
+
+function mostrarImagen3() {
+    img[2].classList.toggle("oculto")
+}
+
+
+
+
+</script>

@@ -1,0 +1,53 @@
+<!--
+    Manipulando CSS
+Crea un documento HTML con un div adentro
+Usando la propiedad style del elemento en javascript dale a ese div altura, ancho y un color de fondo
+Ahora crea la clase .square en tu stylesheet, y dale las mismas propiedades
+Ahora en vez de agregarsela con la propiedad style, hazlo con la propiedad classList.
+Que devuelve h1.classList?
+Desde tu consola quítale la clase .square al div
+Haz una función que cada un segundo (setInterval()) se fije si tiene la clase square, si la tiene que se la quite, y si no la tiene la agregue.
+Si lo hiciste con un if y un else no esta mal, pero prueba usando classList.toggle(). Mucho mas simple no?
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href="altoestilo.css">
+    <title>Document</title>
+    <h1>Hola</h1>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+<script>
+    var div = document.querySelector("div");
+    var h1 = document.querySelector("h1");
+/*    div.style.background = "blue"
+    div.style.height = "30px"
+    div.style.width = "30px"
+*/
+    div.classList.add("square")
+    h1.classList.add("square")
+
+    setInterval(titilarPorSegundo, 1000)
+    
+    function titilarPorSegundo(){
+        div.classList.toggle("square")
+    }
+</script>
+
+<!--
+    h1.classList no devuelve nada porque no la estoy utilizando ni se ha indicado algún metodo.
+    En caso de utilizarla, se le agrega la misma clase de estilos, lo que da como resultado un 
+    rectangulo detras del h1
+-->
+
+<!--
+    Desde la consola, me deshice de la clase square escribiendo: div.classList.remove("square")
+-->
+
+

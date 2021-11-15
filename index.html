@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="logo"> <img src="UNAHUR 1.svg" /> </div>
+    </header>
+    <main>
+        <article>
+            <h1>Acceso con clave</h1>
+            <input type="number" placeholder="DNI" id="dni"  maxlength="8">
+            <h2>Contraseña</h2>
+            <input type="password" placeholder="contraseña" id="contrasena"></input>
+            <br><br>
+            <button id="ingresar">Ingresar</button>
+
+        </article>
+    </main>
+</body>
+</html>
+
+<script type="text/javascript">
+    var dni = document.getElementById("dni");
+    var contrasena = document.getElementById("contrasena");
+    var ingresar = document.getElementById("ingresar");
+    var resultado;
+    var valido;
+    //Expresion regular que busca que la cadena tenga al menos un digito y una letra:
+    var caracteres = /^(?=.*[a-zA-Z])(?=.*\d)/;
+
+    ingresar.addEventListener("click", function(event) {
+        resultado = 1;
+
+        if (dni.value.length < 8) {
+            alert("El dni (usuario) tiene que tener 8 caracteres");
+            resultado = 0;
+        }
+        valido = caracteres.test(contrasena.value);
+        if(!valido){
+            alert("La contraseña debe estar compuesta por una letra y un numero");
+            resultado = 0;
+        }
+        else {
+            if(contrasena.value.length < 6){
+            alert("La contraseña debe tener un minimo de 6 digitos");
+            resultado = 0;
+            }
+        }
+        
+        if(resultado==1){
+            window.location.href = './Menu.html'
+        }
+    });
+
+
+    
+</script>
